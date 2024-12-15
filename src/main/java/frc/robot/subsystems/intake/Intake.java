@@ -58,11 +58,11 @@ public class Intake extends SubsystemBase {
     }
 
     public Command topSpeed(double speed) {
-        return new InstantCommand(() -> setTop(speed)); 
+        return runOnce(() -> setTop(speed)); 
     }
 
     public Command bottomSpeed(double speed) {
-        return new InstantCommand(() -> setBottom(speed)); 
+        return runOnce(() -> setBottom(speed)); 
     }
 
     public Command intakeNote(double speed) {

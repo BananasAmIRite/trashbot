@@ -57,10 +57,9 @@ public class Drivetrain extends SubsystemBase {
 
         SwerveDriveTelemetry.verbosity = TelemetryVerbosity.HIGH; 
 
-    this.configurePathPlanner();
-    this.configureSwerve();
-
-  }
+        this.configurePathPlanner();
+        this.configureSwerve();
+    }
 
   private void configureSwerve() {
     swerveDrive.swerveController.setMaximumAngularVelocity(Constants.DrivetrainConstants.kMaxOmegaRadiansPerSecond);
